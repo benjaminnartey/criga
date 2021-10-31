@@ -1,0 +1,813 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+ height: 100vh;
+ width: 100vw;
+   overflow: hidden; 
+}
+::placeholder {
+    color: #000;
+    opacity: .5; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #000;
+   opacity: .5;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #000;
+   opacity: .5;
+  }
+.active{
+    visibility: visible;
+}
+
+.main-container .right-column .form-div form .custom-select {
+    position: relative;
+    font-family: Arial;
+    margin-bottom: 20px;
+    width: calc(100% - 100px) !important;
+  }
+  
+  .main-container .right-column .form-div form .custom-select select {
+    display: none; 
+  }
+  
+  .select-selected {
+    background-color: rgba(64, 233, 64, .4);
+    border-radius: 20px;
+  }
+  
+ 
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: rgb(0, 0, 0) transparent transparent transparent;
+  }
+  
+ 
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent rgb(0, 0, 0) transparent;
+    top: 7px;
+  }
+  
+  
+  .select-items div,.select-selected {
+    color: #000;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+ 
+  .select-items {
+      color: #fff;
+    position: absolute;
+    background-color: rgb(64, 233, 64);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+ 
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgb(15, 73, 15);
+    color: #fff;
+  }
+.main-container{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 67% 33%;
+    justify-content: center;
+    background: linear-gradient(to right bottom,  rgb(15, 73, 15), rgb(64, 233, 64));
+}
+.left-column{
+    height: 100%;
+   
+}
+.right-column{
+    height: 100%;
+   
+}
+.main-container .left-column .white-div{
+    position: absolute;
+    width: 68%;
+    height: 200px;
+    background:rgba(255,255,255,0.8);
+    bottom: 25%;
+}
+.main-container .left-column .white-div .logo-box{
+    position: absolute;
+    right: 100px;
+    height: 160px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.main-container .left-column .white-div .logo-box img{
+    height: 100px;
+}
+.main-container .left-column .white-div .logo-box h3{
+    font-size: 14px;
+    color:  rgb(15, 73, 15);
+}
+.main-container .left-column .white-div .logo-box span{
+    font-size: 12px;
+    color:  rgb(15, 73, 15);
+}
+.main-container .left-column .white-div2{
+    position: absolute;
+    width: 68%;
+    height: 70px;
+    background:rgba(255,255,255,0.35);
+    bottom: 10%;
+}
+.main-container .left-column #hero-img{
+    height: 400px;
+    top: 30%;
+    left: 70px;
+    position: absolute;
+
+}
+
+.main-container .right-column{
+    height: 100%;
+    z-index: 2;
+}
+
+.main-container .right-column .form-div{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 510px;
+   background: rgb(238, 218, 218);
+    box-shadow: 0 5px 45px rgba(0,0,0,.3);
+    bottom: 0;
+    border-radius: 50px 50px 0 0;
+    right:100px;
+   
+}
+.main-container .right-column .form-div form{
+    position: absolute;
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+    width: 340px;
+    height: 510px;
+    border: 2px solid green;
+    border-bottom: none;
+    border-radius: 50px 50px 0 0;
+    padding: 0;
+    margin-top: 10px;
+    
+}
+.main-container .right-column .form-div form h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color:rgb(15, 73, 15);
+   margin-bottom: 20px;
+   margin-left: -180px;
+}
+
+.main-container .right-column .form-div form #staff-number{
+    width:calc(100% - 100px);
+    height: 35px;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+   padding-left: 15px;
+   outline: none;
+   border-style: none;
+   margin-bottom: 20px;
+   background: rgba(64, 233, 64, .4);
+  
+}
+
+
+.main-container .right-column .form-div form #v-btn{
+    position: relative;
+    display: inline-block;
+    padding: 10px 60px;
+    border-radius: 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 300;
+   border-style: none;
+   margin-bottom: 20px; 
+   background: rgb(15, 73, 15);
+   color: #fff;
+   transition: all .3s;
+   z-index: 1;
+}
+.main-container .right-column .form-div form #v-btn::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(15, 73, 15);
+    border-radius:20px;
+    z-index: -2;
+}
+
+.main-container .right-column .form-div form #v-btn::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(64, 233, 64);
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+.main-container .right-column .form-div form #v-btn:hover{
+    color: white;
+}
+.main-container .right-column .form-div form #v-btn:active::before{
+    background-color: rgb(15, 73, 15);
+}
+.main-container .right-column .form-div form #v-btn:hover::before{
+    width: 100%;
+}
+
+
+.main-container .right-column .form-div form .verification-info{
+    width:calc(100% - 90px);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-container .right-column .form-div form .verification-info h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+}
+.main-container .right-column .form-div form .verification-info span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color:rgb(15, 73, 15); 
+}
+.main-container .right-column .form-div form #verification-code{
+    width:calc(100% - 100px);
+    height: 35px;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+   padding-left: 15px;
+   outline: none;
+   border-style: none;
+   margin-bottom: 20px;
+   background: rgba(153, 195, 219, 0.8);
+}
+
+
+.main-container .right-column .form-div form #login{
+    position: relative;
+    display: inline-block;
+    padding: 10px 110px;
+    border-radius: 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 15px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 300;
+   border-style: none;
+   margin-bottom: 20px; 
+   background: gold;
+   color: black;
+   transition: all .3s;
+   z-index: 1;
+}
+.main-container .right-column .form-div form #login::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: gold;
+    border-radius:20px;
+    z-index: -2;
+}
+
+.main-container .right-column .form-div form #login::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(247, 247, 74);
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+.main-container .right-column .form-div form #login:hover{
+    color: black;
+}
+.main-container .right-column .form-div form #login:active::before{
+    background-color: rgb(31, 80, 3);
+}
+.main-container .right-column .form-div form #login:hover::before{
+    width: 100%;
+}
+@media(max-width:480px){
+    .main-container{
+        display: block;
+        overflow: hidden;
+        
+    }
+    .main-container .left-column .white-div{
+        position: absolute;
+        width: 100%;
+        height: 80px;
+        background:rgba(255,255,255,0.8);
+        top:12%;
+    }
+    .main-container .left-column .white-div .logo-box{
+        position: absolute;
+        right: 40px;
+        height:80px;
+        bottom: 0px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 8px;
+       
+    }
+    .main-container .left-column .white-div .logo-box img{
+        height: 50px;
+    }
+    .main-container .left-column .white-div .logo-box .logo-text h3{
+        font-size: 10px;
+        color:  rgb(31, 80, 3);
+        
+    }
+    .main-container .left-column .white-div .logo-box span{
+       position:relative;
+       top: -10px;
+        font-size: 7px;
+       
+        color:  rgb(31, 80, 3);
+       
+    }
+    .main-container .left-column .white-div2{
+        position: absolute;
+        top:27%;
+        width: 100%;
+        height: 30px;
+        background:rgba(255,255,255,0.35);
+        bottom: 10%;
+    }
+    .main-container .left-column #hero-img{
+        height:190px;
+        top:5%;
+        left: 5px;
+        position: absolute;
+    
+    }
+    
+.main-container .right-column .form-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    bottom: -295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(238, 218, 218);
+   padding: 10px;
+
+}
+.main-container .right-column .form-div form{  
+    margin-top: 10px;
+    display: flex;
+   flex-direction: column;
+   justify-content:center;
+   align-items: center;
+    width: calc(100% - 15px);
+    height: calc(100% - 10px);
+    top: 0px;
+    background: rgb(238, 218, 218);
+    border: 2px solid green;
+  
+}
+.main-container .right-column .form-div form h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color:rgb(15, 73, 15);
+   margin-bottom: 20px;
+   
+}
+
+.main-container .right-column .form-div form #staff-number{
+  width:calc(100% - 100px);
+    height: 35px;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+   padding-left: 15px;
+   outline: none;
+   border-style: none;
+   margin-bottom: 20px;
+   background: rgba(64, 233, 64, .4);
+  
+}
+
+.main-container .right-column .form-div form #v-btn{
+    position: relative;
+    display: inline-block;
+    padding: 10px 68px;
+    border-radius: 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 300;
+   border-style: none;
+   margin-bottom: 20px; 
+   background: rgba(2, 29, 2, 0.5);
+   color: #fff;
+   transition: all .3s;
+   z-index: 1;
+}
+.main-container .right-column .form-div form #v-btn::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 29, 2, 0.5);
+    border-radius:20px;
+    z-index: -2;
+}
+
+.main-container .right-column .form-div form #v-btn::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(64, 233, 64);
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+.main-container .right-column .form-div form #v-btn:hover{
+    color: white;
+}
+.main-container .right-column .form-div form #v-btn:hover::before{
+    width: 100%;
+}
+
+.main-container .right-column .form-div form .verification-info{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-container .right-column .form-div form .verification-info h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+.main-container .right-column .form-div form .verification-info span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+     color:rgb(15, 73, 15);
+}
+.main-container .right-column .form-div form #verification-code{
+  width:calc(100% - 100px);
+    height: 35px;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+   padding-left: 15px;
+   outline: none;
+   border-style: none;
+   margin-bottom: 20px;
+   background: rgba(153, 195, 219, 0.8);
+}
+
+.main-container .right-column .form-div form #login{
+    position: relative;
+    display: inline-block;
+    padding: 10px 120px;
+    border-radius: 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 15px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 300;
+   border-style: none;
+   margin-bottom: 20px; 
+   background:gold;
+   color: black;
+   transition: all .3s;
+   z-index: 1;
+}
+.main-container .right-column .form-div form #login::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: gold;
+    border-radius:20px;
+    z-index: -2;
+}
+
+.main-container .right-column .form-div form #login::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(247, 247, 74);
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+.main-container .right-column .form-div form #login:hover{
+    color: black;
+}
+.main-container .right-column .form-div form #login:hover::before{
+    width: 100%;
+}
+}
+
+@media(min-width:481px) and (max-width:1024px){
+    .main-container{
+        display: block;
+        overflow: hidden;
+        
+    }
+    .main-container .left-column .white-div{
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        background:rgba(255,255,255,0.8);
+        top: 15%;
+    }
+    .main-container .left-column .white-div .logo-box{
+        position: absolute;
+        right: 50px;
+        height:80px;
+        bottom: 0px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 8px;
+       
+    }
+    .main-container .left-column .white-div .logo-box img{
+        height: 50px;
+    }
+    .main-container .left-column .white-div .logo-box .logo-text h3{
+        font-size: 14px;
+        color:  rgb(31, 80, 3);
+        
+    }
+    .main-container .left-column .white-div .logo-box span{
+       position:relative;
+       top: -10px;
+        font-size: 7px;
+       
+        color:  rgb(31, 80, 3);
+       
+    }
+    .main-container .left-column .white-div2{
+        position: absolute;
+        top: 28%;
+        width: 100%;
+        height: 50px;
+        background:rgba(255,255,255,0.35);
+        bottom: 10%;
+    }
+    .main-container .left-column #hero-img{
+        height:300px;
+        top:5%;
+        left: 30px;
+        position: absolute;
+    
+    }
+    
+.main-container .right-column .form-div{
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    bottom:-510px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(238, 218, 218);
+    border-radius: 40px 40px 0 0;
+}
+.main-container .right-column .form-div form{
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+    width:calc(100% - 30px);
+    height: calc(100% - 25px);
+    border-radius: 40px 40px 0 0;
+   border: 2px solid green;
+  
+}
+.main-container .right-column .form-div form h1{
+    margin-left: -450px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    color:  rgb(31, 80, 3);
+   margin-bottom: 20px;
+   
+}
+
+.main-container .right-column .form-div form #staff-number{
+    width:600px;
+    height: 45px;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+   padding-left: 15px;
+   outline: none;
+   border-style: none;
+   margin-bottom: 40px;
+    background: rgba(64, 233, 64, .4);
+  
+}
+.main-container .right-column .form-div form .custom-select{
+    width: 600px !important;
+    height: 45px !important;
+    
+}
+
+.main-container .right-column .form-div form #v-btn{
+    position: relative;
+    display: inline-block;
+    padding: 15px 230px;
+    border-radius: 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 15px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 300;
+   border-style: none;
+   margin-bottom: 20px; 
+   background: rgba(2, 29, 2, 0.5);
+   color: #fff;
+   transition: all .3s;
+   z-index: 1;
+}
+.main-container .right-column .form-div form #v-btn::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 29, 2, 0.5);
+    border-radius:20px;
+    z-index: -2;
+}
+
+.main-container .right-column .form-div form #v-btn::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(64, 233, 64);
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+.main-container .right-column .form-div form #v-btn:hover{
+    color: white;
+}
+.main-container .right-column .form-div form #v-btn:hover::before{
+    width: 100%;
+}
+
+.main-container .right-column .form-div form .verification-info{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-container .right-column .form-div form .verification-info h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+.main-container .right-column .form-div form .verification-info span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color:  rgb(31, 80, 3);
+}
+.main-container .right-column .form-div form #verification-code{
+    width:600px;
+    height: 45px;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+   padding-left: 15px;
+   outline: none;
+   border-style: none;
+   margin-bottom: 40px;
+   background: rgba(153, 195, 219, 0.8);
+}
+
+.main-container .right-column .form-div form #login{
+    position: relative;
+    display: inline-block;
+    padding: 14px 280px;
+    border-radius: 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 18px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 300;
+   border-style: none;
+   margin-bottom: 20px; 
+   background: gold;
+   color:black;
+   transition: all .3s;
+   z-index: 1;
+}
+.main-container .right-column .form-div form #login::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: gold;
+    border-radius:20px;
+    z-index: -2;
+}
+
+.main-container .right-column .form-div form #login::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(247, 247, 74);
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+.main-container .right-column .form-div form #login:hover{
+    color: black;
+}
+.main-container .right-column .form-div form #login:hover::before{
+    width: 100%;
+}
+}
